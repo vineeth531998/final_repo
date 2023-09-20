@@ -64,9 +64,9 @@ stages:
         process.dir: data/processed
         process.test_file: final_test.csv
         process.train_file: final_train.csv
-        train.n_est: 55
+        train.n_est: 35
     outs:
     - path: model/model.pkl
       hash: md5
-      md5: f4ba720c1756016c4dae574503aa9da3
+      md5: c602ae53579ef7793678f6546fa279e7
       size: 5397398

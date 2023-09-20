@@ -20,7 +20,7 @@ process:
 
 
 train:
-  n_est: 55
+  n_est: 35
 
 
 model_dir: model
