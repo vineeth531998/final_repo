@@ -11,11 +11,11 @@ stages:
       params.yaml:
         base.random_state: 5398
         data_source.local_path: phone_pred_dataset.csv
-        split.split_ratio: 0.2
+        split.split_ratio: 0.15
     outs:
     - path: data/split
       hash: md5
-      md5: 86846e6d6ca8751e5a62bffaaa88f7be.dir
+      md5: 243256e69cecd49e5d8d3254300567a0.dir
       size: 124574
       nfiles: 2
   data_processing:
@@ -23,7 +23,7 @@ stages:
     deps:
     - path: data/split
       hash: md5
-      md5: 86846e6d6ca8751e5a62bffaaa88f7be.dir
+      md5: 243256e69cecd49e5d8d3254300567a0.dir
       size: 124574
       nfiles: 2
     - path: main_code/preprocess.py
@@ -41,7 +41,7 @@ stages:
     outs:
     - path: data/processed
       hash: md5
-      md5: 636fd2a932c9e6cf6c13ca240988a712.dir
+      md5: cb9494a6e0b33661be1adb8b19473de4.dir
       size: 124574
       nfiles: 2
   train:
@@ -49,7 +49,7 @@ stages:
     deps:
     - path: data/processed
       hash: md5
-      md5: 636fd2a932c9e6cf6c13ca240988a712.dir
+      md5: cb9494a6e0b33661be1adb8b19473de4.dir
       size: 124574
       nfiles: 2
     - path: main_code/train.py
@@ -68,5 +68,5 @@ stages:
     outs:
     - path: model/model.pkl
       hash: md5
-      md5: 24c68109cdfda6432778026c909a0a14
-      size: 576041
+      md5: b8f38b00e589724df4e56c754eaa630f
+      size: 580841
